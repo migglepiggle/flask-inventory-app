@@ -1,0 +1,19 @@
+<!-- templates/inventory/edit_item.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Inventory Item</title>
+</head>
+<body>
+    <h1>Edit Inventory Item</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name.label }} {{ form.name(size=30) }}</p>
+        <p>{{ form.quantity.label }} {{ form.quantity() }}</p>
+        <p>{{ form.unit.label }} {{ form.unit(size=10) }}</p>
+        <p>{{ form.category.label }} {{ form.category() }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{ url_for('inventory.index') }}">← Back to List</a>
+</body>
+</html>
